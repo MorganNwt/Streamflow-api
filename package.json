@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node src/app.js",
     "test": "jest --ci --reporters=default --reporters=jest-junit",
+    "test:coverage": "jest --coverage",
     "lint": "eslint src/ tests/",
     "build": "mkdir -p dist && cp -r src/* dist/"
   },
@@ -24,6 +26,13 @@
     "@eslint/js": "^10.0.1",
     "eslint": "^10.1.0",
     "jest": "^30.3.0",
-    "jest-junit": "^16.0.0"
+    "jest-junit": "^16.0.0",
+    "supertest": "^7.2.2"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
   }
 }
